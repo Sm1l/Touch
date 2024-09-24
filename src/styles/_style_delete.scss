@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "Didot";
-  src: url("./assets/fonts/Didot.woff2") format("woff2"), url("./assets/fonts/Didot.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Didot";
-  src: url("./assets/fonts/Didot-Italic.woff2") format("woff2"), url("./assets/fonts/Didot-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-
 :root {
   font-family: "Didot", system-ui, serif;
   line-height: 1.5;
@@ -95,16 +81,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     color: #213547;
-//     background-color: #ffffff;
-//   }
-//   a:hover {
-//     color: #747bff;
-//   }
-//   button {
-//     background-color: #f9f9f9;
-//   }
-// }
