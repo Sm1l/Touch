@@ -1,0 +1,26 @@
+.whatWeDo {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "title ."
+    ". text";
+  background-color: var(--clr-white);
+
+  &_title {
+    font-size: 100px;
+    grid-area: title;
+    text-align: center;
+  }
+
+  &_text {
+    display: flex;
+    text-align: start;
+    grid-area: text;
+
+    &_span {
+      color: var(--clr-blue);
+    }
+  }
+}

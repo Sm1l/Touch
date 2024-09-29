@@ -4,10 +4,56 @@
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/main.scss" />
     <title>Touch</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="wrapper">
+    <header class="header">
+      <h1>we are Touch</h1>
+    </header>
+    <main class="main">
+      <section class="weAreTouch padding">
+        <div class="weAreTouch_container">
+          <p>we are</p>
+          <div class="weAreTouch_imgContainer ibg">
+            <img class="weAreTouch_img" src="./src/assets/img/touch.svg" alt="touch logo" />
+          </div>
+        </div>
+      </section>
+      <section class="makeAProduct padding">
+        <h2>
+          & we will make a
+          <span class="makeAProduct_span">product</span>
+          <br />
+          from your idea
+        </h2>
+      </section>
+      <section class="whatWeDo padding">
+        <div class="whatWeDo_title">
+          <h2>What we do</h2>
+        </div>
+        <div class="whatWeDo_text">
+          <p>
+            websites / branding / merch / brand guidelines / smm /ux researches / banners /performance creatives /
+            whatever
+            <span class="whatWeDo_text_span">you</span>
+            want
+          </p>
+        </div>
+      </section>
+      <section class="ourDesign padding">
+        <h2 class="ourDesign_title">Our design is</h2>
+        <div class="ourDesign_textContainer">
+          <div class="ourDesign_singleTextContainer" id="runningLine">
+            <p class="ourDesign_text">
+              intuitive / bold /timeless / useful / human-oriented / unique / empathic / working / inspiring / relevant
+              / demandful / chic /
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><p>&copy; 2024 Touch. All rights reserved.</p></footer>
     <script type="module" src="/src/index.ts"></script>
   </body>
 </html>

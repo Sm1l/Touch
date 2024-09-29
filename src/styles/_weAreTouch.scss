@@ -1,0 +1,24 @@
+.weAreTouch {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  font-size: 90px;
+
+  &_container {
+    width: 100%;
+    max-width: 725px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  &_imgContainer {
+    width: 100%;
+    padding: 0px 0px 38% 0px;
+  }
+}
