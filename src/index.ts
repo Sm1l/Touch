@@ -1,5 +1,5 @@
 import { runningLine } from "./ts/runningLine";
-import { appearAnimation } from "./ts/appear";
+// import { appearAnimation } from "./ts/appear";
 import { letterFade } from "./ts/letterFade";
 
 document.addEventListener("DOMContentLoaded", () => {
