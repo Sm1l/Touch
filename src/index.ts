@@ -1,3 +1,7 @@
 import { runningLine } from "./ts/runningLine";
 
-runningLine();
+document.addEventListener("DOMContentLoaded", () => {
+  runningLine("lineOne", "right");
+  runningLine("lineTwo", "left");
+  runningLine("lineThree", "right");
+});
