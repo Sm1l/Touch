@@ -7,8 +7,17 @@
   text-align: start;
   background-color: var(--clr-black);
   color: var(--clr-white);
+
+  &_title {
+    display: inline;
+  }
+
+  &_text {
+    display: inline;
+  }
+
   &_span {
+    display: inline-block;
     color: var(--clr-light-blue);
-    // transform: translateY(-200px);
   }
 }

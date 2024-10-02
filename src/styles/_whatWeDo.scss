@@ -2,25 +2,33 @@
   display: grid;
   max-width: var(--max-width);
   width: 100%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
     "title ."
     ". text";
+  column-gap: 10px;
   background-color: var(--clr-white);
 
-  &_title {
-    font-size: 100px;
+  &_titleContainer {
     grid-area: title;
     text-align: center;
   }
 
-  &_text {
-    display: flex;
-    text-align: start;
-    grid-area: text;
+  &_title {
+    font-size: 1.5rem;
+  }
 
+  &_textContainer {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  &_text {
     &_span {
+      display: inline-block;
       color: var(--clr-blue);
     }
   }

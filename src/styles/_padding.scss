@@ -1,3 +1,9 @@
 .padding {
-  padding: 120px 10px;
+  padding: 80px 10px;
+}
+
+@media (width >= 1024px) {
+  .padding {
+    padding: 120px 10px;
+  }
 }

@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-export const letterFade = (selector: string) => {
+export const letterAppear = (selector: string) => {
   const textElement: Element | null = document.querySelector(selector);
 
   if (textElement) {
@@ -16,8 +16,9 @@ export const letterFade = (selector: string) => {
         span.textContent = char;
       }
 
-      span.style.transform = "translateY(-100px)";
-      span.style.opacity = "0";
+      span.style.transform = "translateX(-100px)";
+      span.style.opacity = "0.3";
+      span.style.scale = "0.3";
       span.classList.add("letter");
       textElement.append(span);
     });
@@ -28,9 +29,10 @@ export const letterFade = (selector: string) => {
       letters.forEach((letter, index) => {
         gsap.to(letter, {
           opacity: 1,
-          y: 0,
+          scale: 1,
+          x: 0,
           duration: 1,
-          delay: index * 0.3,
+          delay: index * 0.05,
           ease: "bounce.out",
         });
       });

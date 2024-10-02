@@ -1,36 +1,42 @@
 import { gsap } from "gsap";
 
-export const letterFade = (selector: string) => {
+export const wordAppear = (selector: string) => {
   const textElement: Element | null = document.querySelector(selector);
 
   if (textElement) {
     const text = textElement.textContent;
     textElement.innerHTML = "";
-    text?.split("").forEach((char) => {
+
+    const wordsArray = text?.match(/\S+|\s/g);
+
+    wordsArray?.forEach((word) => {
       const span = document.createElement("span");
       span.style.display = "inline-block";
+      span.style.whiteSpace = "nowrap";
 
-      if (char === " ") {
+      if (word === " ") {
         span.innerHTML = "&nbsp;";
       } else {
-        span.textContent = char;
+        span.textContent = word;
       }
 
-      span.style.transform = "translateY(-100px)";
-      span.style.opacity = "0";
-      span.classList.add("letter");
+      span.style.transform = "translateX(-100px)";
+      span.style.opacity = "0.3";
+      span.style.scale = "0.3";
+      span.classList.add("word");
       textElement.append(span);
     });
 
-    const letters = textElement.querySelectorAll(".letter");
+    const words = textElement.querySelectorAll(".word");
 
-    const animateLetters = () => {
-      letters.forEach((letter, index) => {
-        gsap.to(letter, {
+    const animateWords = () => {
+      words.forEach((word, index) => {
+        gsap.to(word, {
           opacity: 1,
-          y: 0,
+          scale: 1,
+          x: 0,
           duration: 1,
-          delay: index * 0.3,
+          delay: index * 0.05,
           ease: "bounce.out",
         });
       });
@@ -39,7 +45,7 @@ export const letterFade = (selector: string) => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateLetters();
+          animateWords();
           observer.unobserve(entry.target);
         }
       });

@@ -10,7 +10,8 @@
   overflow: hidden;
 
   &_title {
-    font-weight: 100px;
+    display: inline-block;
+    font-size: 1.5rem;
   }
 
   &_textContainer {
@@ -29,7 +30,7 @@
   }
 
   &_text {
-    font-size: 80px;
+    font-size: 1.35rem;
     font-style: italic;
     white-space: nowrap;
     display: inline-block;
