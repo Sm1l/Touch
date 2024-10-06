@@ -9,6 +9,7 @@
     ". text";
   column-gap: 10px;
   background-color: var(--clr-white);
+  overflow: hidden;
 
   &_titleContainer {
     grid-area: title;
@@ -21,12 +22,13 @@
 
   &_textContainer {
     grid-area: text;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
+
+    position: relative;
+    overflow: hidden;
   }
 
   &_text {
+    display: inline;
     &_span {
       display: inline-block;
       color: var(--clr-blue);

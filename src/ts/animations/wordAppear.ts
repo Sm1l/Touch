@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-
+import { createObserver } from "../../helpers/createObserver";
 export const wordAppear = (selector: string) => {
   const textElement: Element | null = document.querySelector(selector);
 
@@ -41,16 +41,6 @@ export const wordAppear = (selector: string) => {
         });
       });
     };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateWords();
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    observer.observe(textElement);
+    createObserver(selector, animateWords);
   }
 };

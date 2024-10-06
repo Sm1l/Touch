@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
+import { createObserver } from "../../helpers/createObserver";
 
-export const letterAppear = (selector: string) => {
+export const letterFade = (selector: string) => {
   const textElement: Element | null = document.querySelector(selector);
 
   if (textElement) {
@@ -16,9 +17,8 @@ export const letterAppear = (selector: string) => {
         span.textContent = char;
       }
 
-      span.style.transform = "translateX(-100px)";
-      span.style.opacity = "0.3";
-      span.style.scale = "0.3";
+      span.style.transform = "translateY(-100px)";
+      span.style.opacity = "0";
       span.classList.add("letter");
       textElement.append(span);
     });
@@ -29,24 +29,14 @@ export const letterAppear = (selector: string) => {
       letters.forEach((letter, index) => {
         gsap.to(letter, {
           opacity: 1,
-          scale: 1,
-          x: 0,
+          y: 0,
           duration: 1,
-          delay: index * 0.05,
+          delay: index * 0.3,
           ease: "bounce.out",
         });
       });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateLetters();
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    observer.observe(textElement);
+    createObserver(selector, animateLetters);
   }
 };

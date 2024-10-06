@@ -5,10 +5,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--clr-blue);
+  background-color: var(--clr-blue1);
   color: var(--clr-white);
   font-size: 1.6rem;
   min-height: 100dvh;
+  overflow: hidden;
+  position: relative;
+  cursor: none;
 
   &_container {
     width: 100%;
@@ -18,8 +21,27 @@
     text-align: start;
   }
 
+  &_title {
+    position: relative;
+    z-index: 9999;
+  }
+
   &_imgContainer {
     width: 100%;
     padding: 0px 0px 38% 0px;
+    z-index: 9999;
   }
+}
+
+.trail {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--clr-blue);
+  pointer-events: none;
+}
+
+.trail-fragment {
+  pointer-events: none;
 }
