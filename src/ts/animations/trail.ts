@@ -13,7 +13,7 @@ export const trail = () => {
     });
 
     function createTrail(x: number, y: number) {
-      const fragmentCount = 6;
+      const fragmentCount = 4;
 
       for (let i = 0; i < fragmentCount; i++) {
         const fragment = document.createElement("div");

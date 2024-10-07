@@ -19,7 +19,7 @@ export const runningLine = (selector: string, side: "left" | "right" = "right") 
 
       const animation = gsap.to([runningLineEl, clone], {
         x: xValue,
-        duration: 30,
+        duration: 60,
         repeat: -1,
         ease: "none",
         modifiers: {
