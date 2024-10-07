@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--clr-blue1);
+  background-color: var(--clr-blue2);
   color: var(--clr-white);
   font-size: 1.6rem;
   min-height: 100dvh;
@@ -44,4 +44,5 @@
 
 .trail-fragment {
   pointer-events: none;
+  will-change: transform, opacity;
 }
