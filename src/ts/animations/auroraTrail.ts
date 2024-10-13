@@ -17,9 +17,18 @@ export const auroraTrail = (containerSelector: string) => {
   let mouseX = 0;
   let mouseY = 0;
   let mouseInside = false;
+  let rect = container.getBoundingClientRect();
+
+  const updateRect = () => {
+    rect = container.getBoundingClientRect();
+  };
+
+  window.addEventListener("resize", updateRect);
+  container.addEventListener("mousemove", (event) => {
+    updateMousePosition(event);
+  });
 
   const updateMousePosition = (event: MouseEvent) => {
-    const rect = container.getBoundingClientRect();
     if (mouseInside) {
       mouseX = event.clientX - rect.left;
       mouseY = event.clientY - rect.top;
@@ -62,7 +71,7 @@ export const auroraTrail = (containerSelector: string) => {
       position: "absolute",
       borderRadius: "50%",
       background: `radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0) 70%)`,
-      filter: "blur(20px)",
+      filter: "blur(15px)",
       willChange: "transform, background-color, width, height",
     });
 
@@ -91,7 +100,7 @@ export const auroraTrail = (containerSelector: string) => {
         background: `radial-gradient(circle at ${Math.random() * 100}% ${Math.random() * 100}%, ${gsap.utils.random(
           someColors
         )}, rgba(0, 0, 0, 0) 70%)`,
-        duration: gsap.utils.random(3, 4),
+        duration: gsap.utils.random(1, 2),
         ease: "sine.inOut",
         onComplete: animateAurora,
         scaleX: gsap.utils.random(1, 2),
@@ -103,7 +112,7 @@ export const auroraTrail = (containerSelector: string) => {
     animateToCursor();
   };
 
-  const auroraCount = 10;
+  const auroraCount = 7;
   for (let i = 0; i < auroraCount; i++) {
     createAuroraElement();
   }
