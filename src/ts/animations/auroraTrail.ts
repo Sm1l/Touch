@@ -82,7 +82,7 @@ export const auroraTrail = (containerSelector: string) => {
 
     const animateToCursor = () => {
       if (mouseInside) {
-        const duration = speed; // Более крупные элементы будут двигаться медленнее
+        const duration = speed;
         gsap.to(aurora, {
           x: mouseX - initialSize / 2,
           y: mouseY - initialSize / 2,
@@ -112,7 +112,7 @@ export const auroraTrail = (containerSelector: string) => {
     animateToCursor();
   };
 
-  const auroraCount = 7; // Количество мелких элементов
+  const auroraCount = 5; // Количество мелких элементов
   for (let i = 0; i < auroraCount; i++) {
     createAuroraElement(gsap.utils.random(150, 250), gsap.utils.random(0.2, 0.5)); // Мелкие и быстрые
   }
