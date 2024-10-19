@@ -4,7 +4,6 @@ import { letterFade } from "./animations/letterFade";
 import { aurora } from "./animations/aurora";
 import { auroraTrail } from "./animations/auroraTrail";
 import { auroraCenter } from "./animations/auroraCenter";
-import { checkIfNotTouchDevice } from "../helpers/checkIfNotTouchDevice";
 import { checkIfTouchDevice } from "../helpers/checkIfTouchDevice";
 
 const auroraAnimation = () => {
