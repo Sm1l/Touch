@@ -57,12 +57,12 @@ export const auroraTrail = (containerSelector: string) => {
     mouseInside = true;
   });
 
-  const createAuroraElement = () => {
+  const createAuroraElement = (size: number, speed: number) => {
     const aurora = document.createElement("div");
     aurora.classList.add("aurora");
     container.append(aurora);
 
-    const initialSize = gsap.utils.random(150, 400);
+    const initialSize = size;
     Object.assign(aurora.style, {
       width: `${initialSize}px`,
       height: `${initialSize}px`,
@@ -71,7 +71,7 @@ export const auroraTrail = (containerSelector: string) => {
       position: "absolute",
       borderRadius: "50%",
       background: `radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0) 70%)`,
-      filter: "blur(15px)",
+      filter: "blur(30px)",
       willChange: "transform, background-color, width, height",
     });
 
@@ -82,12 +82,12 @@ export const auroraTrail = (containerSelector: string) => {
 
     const animateToCursor = () => {
       if (mouseInside) {
-        const duration = gsap.utils.random(1, 1.3);
+        const duration = speed; // Более крупные элементы будут двигаться медленнее
         gsap.to(aurora, {
           x: mouseX - initialSize / 2,
-          y: mouseY - initialSize,
+          y: mouseY - initialSize / 2,
           duration: duration,
-          ease: "power1.out",
+          ease: "none",
           onComplete: animateToCursor,
         });
       } else {
@@ -100,7 +100,7 @@ export const auroraTrail = (containerSelector: string) => {
         background: `radial-gradient(circle at ${Math.random() * 100}% ${Math.random() * 100}%, ${gsap.utils.random(
           someColors
         )}, rgba(0, 0, 0, 0) 70%)`,
-        duration: gsap.utils.random(1, 2),
+        duration: gsap.utils.random(3, 4),
         ease: "sine.inOut",
         onComplete: animateAurora,
         scaleX: gsap.utils.random(1, 2),
@@ -112,8 +112,13 @@ export const auroraTrail = (containerSelector: string) => {
     animateToCursor();
   };
 
-  const auroraCount = 7;
+  const auroraCount = 7; // Количество мелких элементов
   for (let i = 0; i < auroraCount; i++) {
-    createAuroraElement();
+    createAuroraElement(gsap.utils.random(150, 250), gsap.utils.random(0.2, 0.5)); // Мелкие и быстрые
+  }
+
+  const bigAuroraCount = 3; // Количество крупных элементов
+  for (let i = 0; i < bigAuroraCount; i++) {
+    createAuroraElement(gsap.utils.random(300, 400), gsap.utils.random(0.5, 1)); // Крупные и медленные
   }
 };

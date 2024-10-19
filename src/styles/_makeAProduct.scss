@@ -9,15 +9,31 @@
   color: var(--clr-white);
 
   &_title {
-    display: inline;
+    display: inline-block;
+    text-align: center;
   }
 
   &_text {
     display: inline;
   }
 
+  &_imgContainer {
+    display: inline-block;
+    margin-left: -20px;
+    position: relative;
+    padding: 20px 20px 20px 20px;
+  }
+
   &_span {
     display: inline-block;
     color: var(--clr-light-blue);
+  }
+}
+
+@media (width >= 530px) {
+  .makeAProduct {
+    &_title {
+      text-align: start;
+    }
   }
 }
