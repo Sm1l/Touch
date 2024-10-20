@@ -5,9 +5,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "title ."
-    ". text";
+    "title title"
+    "text text";
   column-gap: 10px;
+  row-gap: 40px;
   background-color: var(--clr-white);
   overflow: hidden;
 
@@ -22,6 +23,7 @@
 
   &_textContainer {
     grid-area: text;
+    text-align: center;
 
     position: relative;
     overflow: hidden;
@@ -32,6 +34,21 @@
     &_span {
       display: inline-block;
       color: var(--clr-blue);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .whatWeDo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title ."
+      ". text";
+    row-gap: 0px;
+
+    &_textContainer {
+      text-align: start;
     }
   }
 }
