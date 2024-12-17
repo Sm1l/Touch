@@ -1,6 +1,6 @@
 import gsap from "gsap";
-import { elasticAppear } from "./animations/elasticAppear";
-import { letterFade } from "./animations/letterFade";
+// import { elasticAppear } from "./animations/elasticAppear";
+// import { letterFade } from "./animations/letterFade";
 import { aurora } from "./animations/aurora";
 import { auroraTrail } from "./animations/auroraTrail";
 import { auroraCenter } from "./animations/auroraCenter";
@@ -15,7 +15,7 @@ export const weAreTouchBlockAnimation = () => {
     .timeline()
     .add(() => auroraAnimation())
     .add(() => aurora(".weAreTouch"))
-    .add(() => auroraCenter(".weAreTouch"))
-    .add(() => elasticAppear(".weAreTouch_imgContainer"))
-    .add(() => letterFade(".weAreTouch_title"));
+    .add(() => auroraCenter(".weAreTouch"));
+  // .add(() => elasticAppear(".weAreTouch_imgContainer"))
+  // .add(() => letterFade(".weAreTouch_title"));
 };
