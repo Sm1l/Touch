@@ -1,6 +1,6 @@
 .whatWeDo {
   display: grid;
-  max-width: var(--max-width);
+  max-width: var(--medium-width);
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -14,7 +14,7 @@
 
   &_titleContainer {
     grid-area: title;
-    text-align: center;
+    text-align: start;
   }
 
   &_title {

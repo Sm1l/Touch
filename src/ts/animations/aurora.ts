@@ -21,7 +21,7 @@ export const aurora = (containerSelector: string) => {
     width: "100%",
     height: "100%",
     position: "absolute",
-    background: "radial-gradient(circle at center, rgba(0, 255, 255, 0.5), rgba(255, 0, 255, 0) 70%)",
+    background: "radial-gradient(circle at center, rgba(0, 255, 255, 0.5))",
     filter: "blur(40px)",
     borderRadius: "50%",
     willChange: "transform, background-color, width, height",
