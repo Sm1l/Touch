@@ -32,7 +32,7 @@
 
 .contacts_title {
   grid-area: title;
-  text-align: start;
+  text-align: center;
 }
 
 .contacts_textContainer {
@@ -50,11 +50,6 @@
   display: flex;
   gap: 10px;
   align-items: center;
-
-  &:hover {
-    color: var(--clr-blue);
-    transition: color 300ms ease-out;
-  }
 }
 
 .contacts_img {
@@ -62,9 +57,19 @@
   height: 40px;
 }
 
+@media (hover: hover) {
+  .contacts_link:hover {
+    color: var(--clr-blue);
+    transition: color 300ms ease-out;
+  }
+}
+
 @media (min-width: 768px) {
   .contacts_container {
     row-gap: 80px;
+  }
+  .contacts_title {
+    text-align: start;
   }
 }
 

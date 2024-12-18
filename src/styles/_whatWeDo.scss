@@ -14,7 +14,7 @@
 
   &_titleContainer {
     grid-area: title;
-    text-align: start;
+    text-align: center;
   }
 
   &_title {
@@ -46,6 +46,10 @@
       "title ."
       ". text";
     row-gap: 0px;
+
+    &_titleContainer {
+      text-align: start;
+    }
 
     &_textContainer {
       text-align: start;
