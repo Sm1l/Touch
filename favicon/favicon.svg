@@ -4,5 +4,5 @@
 <path d="M55.1047 38.9999L65.6477 61.7227" stroke="white" stroke-width="1.61274" stroke-linecap="round" stroke-linejoin="round"></path>
 <path d="M64.686 34.5231L75.2531 57.2459" stroke="white" stroke-width="1.61274" stroke-linecap="round" stroke-linejoin="round"></path>
 </svg><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(0.1); } }
-@media (prefers-color-scheme: dark) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: contrast(1) brightness(1); } }
 </style></svg>
