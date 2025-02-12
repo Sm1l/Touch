@@ -19,11 +19,12 @@
 
   &_titleContainer {
     width: 100%;
-    max-width: 725px;
+    max-width: var(--medium-width);
     display: flex;
     flex-direction: column;
     text-align: start;
     margin: 0 auto;
+    gap: 30px;
   }
 
   &_title {
@@ -33,7 +34,7 @@
 
   &_imgContainer {
     width: 100%;
-    padding: 0px 0px 38% 0px;
+    padding: 0px 0px 7.125% 0px;
     z-index: 9999;
   }
 }
