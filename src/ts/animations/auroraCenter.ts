@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { someColors } from "../../helpers/colors";
+import { colors } from "../../helpers/colors";
 
 export const auroraCenter = (containerSelector: string) => {
   const container: HTMLElement | null = document.querySelector(containerSelector);
@@ -33,7 +33,7 @@ export const auroraCenter = (containerSelector: string) => {
     });
 
     const animateSizeColor = () => {
-      const randomColor = gsap.utils.random(someColors);
+      const randomColor = gsap.utils.random(colors);
       const newSize = gsap.utils.random(150, 250);
       const randomDuration = gsap.utils.random(1, 4);
 
