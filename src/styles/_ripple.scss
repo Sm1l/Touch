@@ -1,0 +1,8 @@
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: transparent;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  filter: blur(4px);
+}
