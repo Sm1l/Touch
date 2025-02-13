@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { rainbowColors } from "../../helpers/colors";
+import { colors } from "../../helpers/colors";
 
 export const trail = () => {
   const background: HTMLElement | null = document.querySelector(".weAreTouch");
@@ -33,7 +33,7 @@ export const trail = () => {
 
     function createTrail(x: number, y: number) {
       const fragment = getFragmentFromPool();
-      const randomColor = gsap.utils.random(rainbowColors);
+      const randomColor = gsap.utils.random(colors);
 
       gsap.set(fragment, {
         left: `${x}px`,
