@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { someColors } from "../../helpers/colors";
+import { colors } from "../../helpers/colors";
 
 export const auroraTrail = (containerSelector: string) => {
   const container: HTMLElement | null = document.querySelector(containerSelector);
@@ -98,7 +98,7 @@ export const auroraTrail = (containerSelector: string) => {
     const animateAurora = () => {
       gsap.to(aurora, {
         background: `radial-gradient(circle at ${Math.random() * 100}% ${Math.random() * 100}%, ${gsap.utils.random(
-          someColors
+          colors
         )}, rgba(0, 0, 0, 0) 70%)`,
         duration: gsap.utils.random(3, 4),
         ease: "sine.inOut",

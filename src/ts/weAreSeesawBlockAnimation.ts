@@ -7,15 +7,16 @@ import { auroraCenter } from "./animations/auroraCenter";
 import { checkIfTouchDevice } from "../helpers/checkIfTouchDevice";
 
 const auroraAnimation = () => {
-  !checkIfTouchDevice() && auroraTrail(".weAreTouch");
+  !checkIfTouchDevice() && auroraTrail(".weAreSeesaw");
 };
 
-export const weAreTouchBlockAnimation = () => {
+export const weAreSeesawBlockAnimation = () => {
   gsap
     .timeline()
     .add(() => auroraAnimation())
-    .add(() => aurora(".weAreTouch"))
-    .add(() => auroraCenter(".weAreTouch"));
+    .add(() => aurora(".weAreSeesaw"))
+    .add(() => auroraCenter(".weAreSeesaw"));
+
   // .add(() => elasticAppear(".weAreTouch_imgContainer"))
   // .add(() => letterFade(".weAreTouch_title"));
 };

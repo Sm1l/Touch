@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { someColorsLight } from "../../helpers/colors";
+import { lightColors } from "../../helpers/colors";
 export const aurora = (containerSelector: string) => {
   const container: HTMLElement | null = document.querySelector(containerSelector);
 
@@ -32,7 +32,7 @@ export const aurora = (containerSelector: string) => {
       x: `random(-20%, 20%)`,
       y: `random(-20%, 20%)`,
       background: `radial-gradient(circle at ${Math.random() * 100}% ${Math.random() * 100}%, ${gsap.utils.random(
-        someColorsLight
+        lightColors
       )}, rgba(0, 0, 0, 0) 70%)`,
       duration: 2,
       ease: "sine.inOut",

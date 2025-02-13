@@ -1,10 +1,10 @@
 // import { makeAProductBlockAnimation } from "./ts/makeAProductBlockAnimation";
-import { weAreTouchBlockAnimation } from "./ts/weAreTouchBlockAnimation";
+import { weAreSeesawBlockAnimation } from "./ts/weAreSeesawBlockAnimation";
 // import { whatWeDoBlockAnimation } from "./ts/whatWeDoBlockAnimation";
 import { ourDesignBlockAnimation } from "./ts/ourDesignBlockAnimation";
 
 document.addEventListener("DOMContentLoaded", () => {
-  weAreTouchBlockAnimation();
+  weAreSeesawBlockAnimation();
   // makeAProductBlockAnimation();
   // whatWeDoBlockAnimation();
   ourDesignBlockAnimation();
