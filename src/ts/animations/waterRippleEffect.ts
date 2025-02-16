@@ -9,14 +9,14 @@ export const waterRippleEffect = (containerSelector: string) => {
     return;
   }
 
-  container.style.position = "relative"; // Для правильного позиционирования кругов
+  container.style.position = "relative";
 
   const createRipple = (x: number, y: number) => {
     const ripple = document.createElement("div");
     ripple.classList.add("ripple");
     container.append(ripple);
 
-    const randomColor = gsap.utils.random(colors); // Выбираем случайный цвет
+    const randomColor = gsap.utils.random(colors);
 
     Object.assign(ripple.style, {
       position: "absolute",
@@ -25,19 +25,19 @@ export const waterRippleEffect = (containerSelector: string) => {
       width: "0px",
       height: "0px",
       borderRadius: "50%",
-      border: `6px solid ${randomColor}`, // Толстая граница
+      border: `6px solid ${randomColor}`,
       background: "transparent",
       transform: "translate(-50%, -50%)",
       pointerEvents: "none",
       opacity: 1,
-      filter: "blur(4px)", // Размытие границ
+      filter: "blur(4px)",
     });
 
     gsap.to(ripple, {
       width: "250px",
       height: "250px",
       opacity: 0,
-      borderWidth: "2px", // Граница становится тоньше при исчезновении
+      borderWidth: "2px",
       duration: 1.8,
       ease: "power2.out",
       onComplete: () => ripple.remove(),

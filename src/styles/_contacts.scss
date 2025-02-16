@@ -1,7 +1,7 @@
 .contacts {
   width: 100%;
   background-color: var(--clr-black);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .contacts_background {
@@ -51,6 +51,7 @@
   gap: 6px;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .contacts_logo {
@@ -86,6 +87,7 @@
   }
   .contacts_link {
     justify-content: flex-start;
+    margin: 0;
   }
   .contacts_title {
     text-align: start;
