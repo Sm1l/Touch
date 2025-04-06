@@ -9,12 +9,18 @@
     "build": "tsc && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "stylelint": "stylelint '**/*{.css,.scss}'",
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
+    "stylelint": "^16.18.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-semantic-groups": "^1.2.1",
     "typescript": "^5.6.2",
-    "vite": "^5.4.8"
+    "vite": "^6.2.5"
   },
   "dependencies": {
     "gsap": "^3.12.5"

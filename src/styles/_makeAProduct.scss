@@ -1,15 +1,19 @@
 .makeAProduct {
   display: flex;
-  width: 100%;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: start;
-  background-color: var(--clr-black);
+  align-items: center;
+
+  width: 100%;
+
   color: var(--clr-white);
+  text-align: start;
+
+  background-color: var(--clr-black);
 
   &_title {
     display: inline-block;
+
     text-align: center;
   }
 
@@ -18,14 +22,17 @@
   }
 
   &_imgContainer {
-    display: inline-block;
-    margin-left: -20px;
     position: relative;
+
+    display: inline-block;
+
+    margin-left: -20px;
     padding: 20px 20px 20px 20px;
   }
 
   &_span {
     display: inline-block;
+
     color: var(--clr-light-blue);
   }
 }

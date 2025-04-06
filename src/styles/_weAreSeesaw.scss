@@ -1,30 +1,37 @@
 .weAreSeesaw {
   display: flex;
-  width: 100%;
   flex-direction: column;
-  background-color: var(--clr-deep-blue);
-  color: var(--clr-white);
-  font-size: 1.6rem;
+
+  width: 100%;
   min-height: 100dvh;
 
+  color: var(--clr-white);
+  font-size: 1.6rem;
+
+  background-color: var(--clr-deep-blue);
+
   &_container {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
     text-align: center;
   }
 
   &_titleContainer {
-    width: 100%;
-    max-width: var(--medium-width);
     display: flex;
     flex-direction: column;
-    text-align: start;
-    margin: 0 auto;
     gap: 30px;
+
+    width: 100%;
+    max-width: var(--medium-width);
+    margin: 0 auto;
+
+    text-align: start;
   }
 
   &_title {
@@ -33,18 +40,23 @@
   }
 
   &_imgContainer {
+    z-index: 9999;
+
     width: 100%;
     padding: 0px 0px 7.125% 0px;
-    z-index: 9999;
   }
 }
 
 .trail {
   position: absolute;
+
   width: 100px;
   height: 100px;
+
   border-radius: 50%;
+
   background-color: var(--clr-blue);
+
   pointer-events: none;
 }
 

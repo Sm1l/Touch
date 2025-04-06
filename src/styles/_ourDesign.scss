@@ -1,38 +1,48 @@
 .ourDesign {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--clr-black);
-  color: var(--clr-white);
   gap: 80px;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  color: var(--clr-white);
+
+  background-color: var(--clr-black);
+
   overflow: hidden;
 
   &_title {
     display: inline-block;
+
     font-size: 1.5rem;
   }
 
   &_textContainer {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 60px;
+
     overflow: hidden;
-    position: relative;
   }
 
   &_singleTextContainer {
+    position: relative;
+
     display: flex;
     display: inline-block;
+
     white-space: nowrap;
-    position: relative;
   }
 
   &_text {
+    display: inline-block;
+
     font-size: 1.35rem;
     font-style: italic;
     white-space: nowrap;
-    display: inline-block;
   }
 }
