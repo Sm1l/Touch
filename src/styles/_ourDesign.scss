@@ -14,9 +14,11 @@
   overflow: hidden;
 
   &_title {
-    display: inline-block;
-
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: var(--medium-width);
   }
 
   &_textContainer {
@@ -44,5 +46,13 @@
     font-size: 1.35rem;
     font-style: italic;
     white-space: nowrap;
+  }
+}
+
+@media (width >= 768px) {
+  .ourDesign {
+    &_title {
+      justify-content: flex-start;
+    }
   }
 }

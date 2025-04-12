@@ -33,6 +33,12 @@
 
 html {
   font-size: 30px;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 500;
+  }
 }
 
 @media (width >= 768px) {
