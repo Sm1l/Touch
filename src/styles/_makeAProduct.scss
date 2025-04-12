@@ -8,13 +8,13 @@
   &_titleWrapper {
     display: inline-block;
 
-    text-align: center;
     width: 100%;
+
+    text-align: center;
   }
 
   &_title {
     position: relative;
-    font-weight: normal;
 
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +24,8 @@
 
     width: auto;
     max-width: 100%;
+
+    font-weight: normal;
   }
 
   &_imgContainer {
@@ -62,6 +64,7 @@
     &_titleWrapper {
       max-width: 748px;
     }
+
     &_title {
       justify-content: flex-start;
     }

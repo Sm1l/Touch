@@ -25,7 +25,7 @@
   &_titleContainer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 
     width: 100%;
     max-width: var(--medium-width);
@@ -39,11 +39,22 @@
     z-index: 9999;
   }
 
+  &_logoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   &_imgContainer {
     z-index: 9999;
+    padding: 13% 0px 0px 0px;
 
-    width: 100%;
-    padding: 0px 0px 7.125% 0px;
+    &_see {
+      width: 82.1%;
+    }
+    &_saw {
+      width: 100%;
+    }
   }
 }
 
