@@ -3,6 +3,7 @@ import { weAreSeesawBlockAnimation } from "./ts/weAreSeesawBlockAnimation";
 // import { whatWeDoBlockAnimation } from "./ts/whatWeDoBlockAnimation";
 import { ourDesignBlockAnimation } from "./ts/ourDesignBlockAnimation";
 import { wrapperAnimation } from "./ts/wrapperAnimation";
+import { HowWeDoSlider } from "./ts/howWeDoSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   weAreSeesawBlockAnimation();
@@ -10,4 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // whatWeDoBlockAnimation();
   ourDesignBlockAnimation();
   wrapperAnimation();
+  HowWeDoSlider();
 });

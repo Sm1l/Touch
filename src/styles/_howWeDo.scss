@@ -4,12 +4,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 60px;
 
   &_container {
     display: flex;
     flex-direction: column;
-    max-width: var(--max-width);
     width: 100%;
+    max-width: var(--medium-width);
   }
 
   &_title {
