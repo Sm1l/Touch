@@ -5,7 +5,10 @@ body {
   margin: 0;
   padding: 0;
 
+  color: var(--clr-white);
   font-family: "Inter", sans-serif;
+
+  background-color: var(--clr-black);
 
   overflow-x: hidden;
 }

@@ -12,8 +12,6 @@
 
   column-gap: 10px;
 
-  background-color: var(--clr-white);
-
   overflow: hidden;
 
   &_titleContainer {
@@ -42,7 +40,7 @@
     &_span {
       display: inline-block;
 
-      color: var(--clr-blue);
+      // color: var(--clr-blue);
     }
   }
 }
