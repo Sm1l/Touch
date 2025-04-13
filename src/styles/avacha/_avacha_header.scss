@@ -1,0 +1,32 @@
+.avacha {
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    padding: 40px 10px;
+  }
+  &_headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    width: 100%;
+    gap: 40px;
+  }
+  &_contactUsButton {
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+    align-self: flex-start;
+  }
+
+  &_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //  width: 100%;
+    //  height: 100%;
+  }
+}
