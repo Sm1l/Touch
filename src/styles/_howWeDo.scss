@@ -5,12 +5,14 @@
   justify-content: center;
   width: 100%;
   gap: 60px;
+  padding: 80px 0px;
 
   &_container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: var(--medium-width);
+    max-width: var(--max-width);
+    padding: 0px 10px;
   }
 
   &_title {
@@ -22,6 +24,15 @@
   .howWeDo {
     &_title {
       text-align: start;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .howWeDo {
+    padding: 120px 0px;
+    &_container {
+      padding: 0px 80px;
     }
   }
 }

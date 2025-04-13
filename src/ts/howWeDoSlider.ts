@@ -11,6 +11,20 @@ export const HowWeDoSlider = () => {
   const swiper = new Swiper(".howWeDoSwiper", {
     slidesPerView: 2.2,
     spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+      },
+      480: {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 2.2,
+        spaceBetween: 30,
+      },
+    },
     //  pagination: {
     //    el: ".swiper-pagination",
     //    dynamicBullets: true,
