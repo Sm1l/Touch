@@ -8,7 +8,7 @@ import "swiper/scss";
 // Swiper.use([Pagination]);
 
 export const HowWeDoSlider = () => {
-  const swiper = new Swiper(".howWeDoSwiper", {
+  new Swiper(".howWeDoSwiper", {
     slidesPerView: 2.2,
     spaceBetween: 30,
     breakpoints: {

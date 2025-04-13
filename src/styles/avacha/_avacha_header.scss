@@ -1,24 +1,32 @@
 .avacha {
   &_header {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: var(--clr-white);
-    color: var(--clr-black);
+    align-items: center;
+
     padding: 40px 10px;
+
+    color: var(--clr-black);
+
+    background-color: var(--clr-white);
   }
+
   &_headerContainer {
     display: flex;
+    gap: 40px;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--max-width);
+
     width: 100%;
-    gap: 40px;
+    max-width: var(--max-width);
   }
+
   &_contactUsButton {
-    color: var(--clr-white);
-    background-color: var(--clr-black);
     align-self: flex-start;
+
+    color: var(--clr-white);
+
+    background-color: var(--clr-black);
   }
 
   &_logo {
