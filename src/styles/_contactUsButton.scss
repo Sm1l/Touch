@@ -1,0 +1,54 @@
+.contactUsButton {
+  width: auto;
+  align-self: flex-start;
+  position: relative;
+  z-index: 9999;
+  font-size: 0.35rem;
+  padding: 0.16rem 0.4rem;
+  margin-top: 0.8rem;
+
+  transition: all 0.4s ease;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 255, 255, 0.8),
+      rgba(255, 0, 255, 0.8),
+      rgba(0, 128, 255, 0.8),
+      rgba(0, 255, 128, 0.8)
+    );
+    background-size: 600% 600%;
+    z-index: -1;
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .contactUsButton:hover {
+    color: white;
+    &::before {
+      animation: shineGradient 3s linear infinite;
+      left: 0;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes shineGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
