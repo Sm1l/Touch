@@ -1,19 +1,22 @@
 .whatWeDo {
   display: grid;
-  max-width: var(--medium-width);
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
   grid-template-areas:
     "title title"
     "text text";
-  column-gap: 10px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
   row-gap: 40px;
-  background-color: var(--clr-white);
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  column-gap: 10px;
+
   overflow: hidden;
 
   &_titleContainer {
     grid-area: title;
+
     text-align: center;
   }
 
@@ -23,28 +26,32 @@
 
   &_textContainer {
     grid-area: text;
-    text-align: center;
 
     position: relative;
+
+    text-align: center;
+
     overflow: hidden;
   }
 
   &_text {
     display: inline;
+
     &_span {
       display: inline-block;
-      color: var(--clr-blue);
+
+      // color: var(--clr-blue);
     }
   }
 }
 
 @media (min-width: 768px) {
   .whatWeDo {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
     grid-template-areas:
       "title ."
       ". text";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
     row-gap: 0px;
 
     &_titleContainer {

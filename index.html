@@ -48,25 +48,34 @@
           <div class="weAreSeesaw_container">
             <div class="weAreSeesaw_titleContainer">
               <p class="weAreSeesaw_title">we are</p>
-              <div class="weAreSeesaw_imgContainer ibg">
-                <picture>
+              <div class="weAreSeesaw_logoContainer">
+                <div class="weAreSeesaw_imgContainer weAreSeesaw_imgContainer_see ibg">
+                  <img class="weAreSeesaw_img" src="./src/assets/img/see.svg" alt="see logo" />
+                </div>
+                <div class="weAreSeesaw_imgContainer weAreSeesaw_imgContainer_saw ibg">
+                  <img class="weAreSeesaw_img" src="./src/assets/img/saw.svg" alt="saw logo" />
+                </div>
+                <!-- <picture>
                   <source srcset="./src/assets/img/seesaw.avif" type="image/avif" />
                   <source srcset="./src/assets/img/seesaw.webp" type="image/webp" />
                   <img class="weAreSeesaw_img" src="./src/assets/img/seesaw.svg" alt="seesaw logo" />
-                </picture>
+                </picture> -->
               </div>
+              <button class="weAreSeesaw_button contactUsButton" id="btnContactUs">contact us</button>
             </div>
           </div>
         </section>
         <section class="makeAProduct padding">
-          <h2 class="makeAProduct_title">
-            <p class="makeAProduct_text">& we will make a</p>
-            <div class="makeAProduct_imgContainer ibg">
-              <span class="makeAProduct_span ibg">product</span>
-              <img class="makeAProduct_img" src="./src/assets/img/outline.svg" alt="outline" />
-            </div>
-            <p class="makeAProduct_text2">from your idea</p>
-          </h2>
+          <div class="makeAProduct_titleWrapper">
+            <h2 class="makeAProduct_title">
+              <span class="makeAProduct_text">& we will make a</span>
+              <span class="makeAProduct_span"
+                >product
+                <img class="makeAProduct_img" src="./src/assets/img/outline.svg" alt="outline" />
+              </span>
+              <span class="makeAProduct_text">from your idea</span>
+            </h2>
+          </div>
         </section>
         <section class="whatWeDo padding">
           <div class="whatWeDo_titleContainer">
@@ -92,30 +101,70 @@
             </div>
             <div class="ourDesign_singleTextContainer">
               <p class="ourDesign_text" id="lineTwo">
-                unique / empathic / working / inspiring / relevant / demandful / bold / impactful / chic /intuitive /
+                unique / empathic / working / inspiring / relevant / demandful / bold / impactful / chic / intuitive /
                 brave / timeless / useful / human-oriented /&#160;
               </p>
             </div>
             <div class="ourDesign_singleTextContainer">
               <p class="ourDesign_text" id="lineThree">
-                demandful / bold / impactful / chic /intuitive / brave / timeless / useful / human-oriented / unique /
+                demandful / bold / impactful / chic / intuitive / brave / timeless / useful / human-oriented / unique /
                 empathic / working / inspiring / relevant /&#160;
               </p>
             </div>
+          </div>
+        </section>
+        <section class="howWeDo">
+          <div class="howWeDo_container">
+            <h2 class="howWeDo_title">How we do</h2>
+          </div>
+          <div class="howWeDoSwiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="howWeDoSwiper_link" href="avacha.html">
+                  <img class="howWeDoSwiper_img" src="./src/assets/img/avachaPic.jpg" alt="avacha" />
+                  <img class="howWeDoSwiper_imgLogo" src="./src/assets/img/avachaLogo.svg" alt="logo" />
+                </a>
+                <div class="howWeDoSwiper_textContainer">
+                  <p class="howWeDoSwiper_brand">Avacha</p>
+                  <span class="howWeDoSwiper_text">website development</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <a class="howWeDoSwiper_link" href="">
+                  <img class="howWeDoSwiper_img" src="./src/assets/img/avachaPic.jpg" alt="avacha" />
+                  <img class="howWeDoSwiper_imgLogo" src="./src/assets/img/avachaLogo.svg" alt="logo" />
+                </a>
+                <div class="howWeDoSwiper_textContainer">
+                  <p class="howWeDoSwiper_brand">Sultagro</p>
+                  <span class="howWeDoSwiper_text">branding</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <a class="howWeDoSwiper_link" href="">
+                  <img class="howWeDoSwiper_img" src="./src/assets/img/avachaPic.jpg" alt="avacha" />
+                  <img class="howWeDoSwiper_imgLogo" src="./src/assets/img/avachaLogo.svg" alt="logo" />
+                </a>
+                <div class="howWeDoSwiper_textContainer">
+                  <p class="howWeDoSwiper_brand">Something</p>
+                  <span class="howWeDoSwiper_text">about</span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </section>
         <section class="contacts">
           <div class="contacts_background">
             <div class="contacts_container padding">
               <h2 class="contacts_title">Contacts</h2>
-              <div class="contacts_textContainer">
+              <div class="contacts_linkContainer">
                 <a href="https://www.instagram.com/wowseesaw" class="contacts_link" target="_blank">
                   <img src="./src/assets/img/instagram.svg" alt="Instagram" class="contacts_img" />
                   @wowseesaw</a
                 >
-                <div class="contacts_logo">
-                  <img src="./src/assets/img/seesaw_min.svg" alt="seesaw" class="contacts_logoImg" />
-                </div>
+              </div>
+              <div class="contacts_logo">
+                <img src="./src/assets/img/seesaw_min.svg" alt="seesaw" class="contacts_logoImg" />
               </div>
             </div>
           </div>
@@ -123,6 +172,6 @@
       </main>
       <footer class="footer"><p>&copy; 2025 Seesaw. All rights reserved.</p></footer>
     </div>
-    <script type="module" src="/src/index.ts"></script>
+    <script type="module" src="/src/ts/index.ts"></script>
   </body>
 </html>

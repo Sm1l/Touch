@@ -1,119 +1,143 @@
 .contacts {
   width: 100%;
+
   background-color: var(--clr-black);
+
   overflow: hidden;
-}
 
-.contacts_background {
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-}
+  &_background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.contacts_container {
-  display: grid;
-  max-width: var(--medium-width);
-  width: 100%;
-  height: 100%;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "title title"
-    "text text";
-  column-gap: 10px;
-  row-gap: 40px;
-  background-color: var(--clr-white);
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-}
+    width: 100%;
+    height: 100%;
 
-.contacts_title {
-  grid-area: title;
-  text-align: center;
-}
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 
-.contacts_textContainer {
-  grid-area: text;
-  display: grid;
-  gap: 20px;
-  grid-template-rows: auto auto;
-}
+    background-color: var(--clr-white);
+  }
 
-.contacts_link {
-  font-size: 1rem;
-  color: var(--clr-black);
-  transition: color 300ms ease-out;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
+  &_container {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "link link"
+      "logo logo";
+    grid-template-rows: auto auto;
+    row-gap: 40px;
 
-.contacts_logo {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    width: 100%;
+    height: 100%;
+    max-width: var(--max-width);
 
-.contacts_logoImg {
-  width: 50%;
-  height: 100%;
-  object-fit: contain;
-  max-width: 250px;
-}
+    column-gap: 10px;
 
-.contacts_img {
-  width: 40px;
-  height: 40px;
-}
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 
+    background-color: var(--clr-white);
+  }
+
+  &_title {
+    grid-area: title;
+
+    color: var(--clr-black);
+    text-align: center;
+  }
+
+  &_linkContainer {
+    grid-area: link;
+  }
+
+  &_link {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    color: var(--clr-black);
+    font-size: 0.6rem;
+
+    transition: color 300ms ease-out;
+  }
+
+  &_logo {
+    grid-area: logo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &_logoImg {
+    width: 50%;
+    height: 100%;
+    max-width: 250px;
+
+    object-fit: contain;
+  }
+
+  &_img {
+    width: 40px;
+    height: 40px;
+  }
+}
 @media (hover: hover) {
   .contacts_link:hover {
     color: var(--clr-blue);
+
     transition: color 300ms ease-out;
   }
 }
 
-@media (min-width: 768px) {
-  .contacts_container {
-    row-gap: 80px;
-  }
-  .contacts_link {
-    justify-content: flex-start;
-    margin: 0;
-  }
-  .contacts_title {
-    text-align: start;
-  }
+@media (width>= 768px) {
+  .contacts {
+    &_container {
+      grid-template-areas:
+        "title logo"
+        "link link";
+      grid-template-rows: auto auto;
+    }
 
-  .contacts_logo {
-    justify-content: flex-end;
-  }
+    &_link {
+      justify-content: flex-start;
 
-  .contacts_logoImg {
-    max-width: 350px;
-  }
+      margin: 0;
+    }
 
-  .contacts_textContainer {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-  }
+    &_title {
+      text-align: start;
+    }
 
-  .contacts_img {
-    width: 50px;
-    height: 50px;
+    &_logo {
+      justify-content: flex-end;
+    }
+
+    &_logoImg {
+      max-width: 350px;
+    }
+
+    &_linkContainer {
+      // grid-template-rows: auto;
+      // grid-template-columns: 1fr 1fr;
+    }
+
+    &_img {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
-@media (min-width: 1340px) {
-  .contacts_link {
-    font-size: 1.35rem;
-  }
-}
+// @media (min-width: 1340px) {
+//   .contacts_link {
+//     font-size: 1.35rem;
+//   }
+// }
