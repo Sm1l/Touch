@@ -2,17 +2,18 @@
   &_header {
     display: flex;
     flex-direction: column;
+    gap: 40px;
     justify-content: center;
     align-items: center;
-    gap: 40px;
 
     padding: 40px 10px 80px;
 
     color: var(--clr-black);
 
-    background-color: var(--clr-white);
-    border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+
+    background-color: var(--clr-white);
   }
 
   &_headerContainer {
@@ -38,6 +39,7 @@
     justify-content: center;
     align-items: center;
   }
+
   &_logoImg {
     display: block;
 
@@ -59,6 +61,7 @@
   .avacha {
     &_header {
       gap: 80px;
+
       padding: 40px 80px 120px;
     }
   }
