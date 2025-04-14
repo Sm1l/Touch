@@ -1,0 +1,32 @@
+.avacha {
+  &_about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--medium-width);
+  }
+
+  &_aboutContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  &_aboutTitle {
+    font-weight: normal;
+    font-size: 0.75rem;
+  }
+  &_aboutText {
+    font-size: 0.55rem;
+  }
+}
+
+@media (width >= 768px) {
+  .avacha {
+    &_about {
+      gap: 40px;
+    }
+  }
+}

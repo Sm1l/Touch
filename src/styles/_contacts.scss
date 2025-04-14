@@ -49,13 +49,17 @@
 
   &_linkContainer {
     grid-area: link;
-  }
-
-  &_link {
-    display: flex;
+    display: inline-flex;
     gap: 6px;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &_link {
+    display: inline-block; /* или inline */
+    align-self: center;
 
     margin: 0 auto;
 
@@ -85,6 +89,7 @@
   }
 
   &_img {
+    display: block;
     width: 40px;
     height: 40px;
   }
@@ -102,7 +107,7 @@
     &_container {
       grid-template-areas:
         "title logo"
-        "link link";
+        "link .";
       grid-template-rows: auto auto;
     }
 
@@ -125,8 +130,7 @@
     }
 
     &_linkContainer {
-      // grid-template-rows: auto;
-      // grid-template-columns: 1fr 1fr;
+      margin: 0;
     }
 
     &_img {
@@ -135,9 +139,3 @@
     }
   }
 }
-
-// @media (min-width: 1340px) {
-//   .contacts_link {
-//     font-size: 1.35rem;
-//   }
-// }

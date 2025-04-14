@@ -1,14 +1,18 @@
 .avacha {
   &_header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 
-    padding: 40px 10px;
+    padding: 40px 10px 80px;
 
     color: var(--clr-black);
 
     background-color: var(--clr-white);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   &_headerContainer {
@@ -18,7 +22,7 @@
     align-items: center;
 
     width: 100%;
-    max-width: var(--max-width);
+    max-width: var(--medium-width);
   }
 
   &_contactUsButton {
@@ -33,8 +37,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &_logoImg {
+    display: block;
 
-    //  width: 100%;
-    //  height: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+  }
+}
+
+@media (width >= 768px) {
+  .avacha {
+    &_logoImg {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .avacha {
+    &_header {
+      gap: 80px;
+      padding: 40px 80px 120px;
+    }
   }
 }
