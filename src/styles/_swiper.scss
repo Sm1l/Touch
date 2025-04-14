@@ -35,12 +35,6 @@
 
     transition: all 300ms ease-out;
     aspect-ratio: 1/1;
-
-    &:hover {
-      filter: brightness(1);
-
-      transition: all 300ms ease-out;
-    }
   }
 
   &_imgLogo {
@@ -70,5 +64,17 @@
   &_text {
     font-weight: 300;
     font-size: 20px;
+  }
+}
+
+@media (hover: hover) {
+  .howWeDoSwiper {
+    &_img {
+      &:hover {
+        filter: brightness(1);
+
+        transition: all 300ms ease-out;
+      }
+    }
   }
 }
