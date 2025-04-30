@@ -1,8 +1,34 @@
-.avacha_picture {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.avacha {
+  &_picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  height: 100vh;
+    padding: 40px 10px;
+  }
+
+  &_pictureImg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (width >= 768px) {
+  .avacha {
+    &_picture {
+      padding: 60px 60px;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .avacha {
+    &_picture {
+      padding: 60px 140px;
+    }
+  }
 }

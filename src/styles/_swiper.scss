@@ -42,6 +42,8 @@
     top: 50%;
     left: 50%;
 
+    max-width: 200px;
+
     transform: translate(-50%, -50%);
 
     object-fit: contain;
@@ -75,6 +77,14 @@
 
         transition: all 300ms ease-out;
       }
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .howWeDoSwiper {
+    &_imgLogo {
+      max-width: 300px;
     }
   }
 }
